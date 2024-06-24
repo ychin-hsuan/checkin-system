@@ -1,6 +1,6 @@
 <script setup></script>
 <template>
-  <div class="h-screen w-screen overflow-x-hidden">
+  <div class="h-screen w-screen overflow-x-hidden bg-white">
     <nav>
       <div>
         <router-link to="/"></router-link>
