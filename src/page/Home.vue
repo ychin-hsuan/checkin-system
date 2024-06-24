@@ -2,6 +2,7 @@
 import { onMounted } from "vue";
 import { googleOneTap } from "vue3-google-login";
 import { decodeCredential } from "vue3-google-login";
+
 const callback = (response) => {
   const userData = decodeCredential(response.credential);
   console.log("Handle the userData", userData);
@@ -19,6 +20,7 @@ onMounted(() => {
 
 <template>
   <div class="h-screen p-2 bg-white">
+    <!-- vue3-google-login -->
     <div class="p-10 absolute right-5 top-5">
       <GoogleLogin :callback="callback" prompt auto-login />
     </div>
@@ -27,14 +29,13 @@ onMounted(() => {
 
     <div class="flex gap-16 justify-center">
       <!-- 新生查詢 -->
-
       <div class="flex flex-col justify-center items-center">
         <span
           class="text-6xl font-black bg-clip-text text-transparent bg-gradient-to-r span-css px-12 pb-12 pt-10"
           >新生報到系統</span
         >
         <div>
-          <search>
+          <div>
             <div class="gap-5 flex pb-5">
               <label>
                 <input
@@ -51,6 +52,7 @@ onMounted(() => {
               >
                 Search
               </button>
+              <!-- modal -->
               <dialog id="my_modal_1" class="modal">
                 <div class="w-1/3">
                   <div
@@ -87,7 +89,7 @@ onMounted(() => {
                 </div>
               </dialog>
             </div>
-          </search>
+          </div>
         </div>
       </div>
     </div>

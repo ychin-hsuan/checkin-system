@@ -5,7 +5,6 @@
       <div>
         <router-link to="/"></router-link>
         <router-link to="/table"></router-link>
-
         <router-view />
       </div>
     </nav>

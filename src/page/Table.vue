@@ -10,15 +10,16 @@ const gotoHome = () => {
 <template>
   <div class="h-screen p-2 bg-white">
     <div class="pt-20 px-20">
+      <!-- table -->
       <div class="overflow-x-auto">
-        <table class="table">
+        <table class="table text-xl">
           <!-- head -->
           <thead>
-            <tr>
+            <tr class="text-lg">
               <th></th>
-              <th>Name</th>
-              <th>Job</th>
-              <th>Favorite Color</th>
+              <th>姓名</th>
+              <th>身分證字號</th>
+              <th>報到編號</th>
             </tr>
           </thead>
           <tbody>
@@ -57,6 +58,7 @@ const gotoHome = () => {
         <span class="text-lg absolute left-20 bottom-10 font-thin"
           >復興高中 資訊團隊</span
         >
+        <!-- 人數查看btn -->
         <label class="absolute bottom-9 right-40" for="my_modal_7">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -105,7 +107,7 @@ const gotoHome = () => {
           </div>
           <label class="modal-backdrop" for="my_modal_7">Close</label>
         </div>
-
+        <!-- 回主頁面btn -->
         <button class="absolute bottom-10 right-24" @click="gotoHome">
           <svg
             xmlns="http://www.w3.org/2000/svg"
